@@ -1,0 +1,47 @@
+@import "../../../global/scss/config";
+
+.destinations-list {
+
+}
+
+.destination-list-item {
+  @include flex(row, flex-start, flex-start);
+  flex-wrap: initial !important;
+
+  &-modal-content {
+    @include pad-box(24px);
+  }
+  .img {
+    background-size: cover;
+    background-position: center;
+    flex: 1 0 150px;
+    min-height: 100px;
+  }
+
+  .info {
+    @include flex(column, flex-start, flex-start);
+    margin-left: 12px;
+    flex: 1 1 100%;
+
+    .name {
+      @include font(14px, 700, 0, $dark-gray);
+
+    }
+
+    .description {
+      @include font(13px, 500, 0, $medium-gray);
+    }
+  }
+
+  .actions {
+    font-size: 18px;
+
+    & > span {
+      margin-right: 12px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

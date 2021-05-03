@@ -1,0 +1,35 @@
+@import "../../../global/scss/config";
+
+.destination-form {
+  @include scale-max-content-width;
+  @include flex(column, space-between, flex-start);
+  @include max-size;
+
+  &-content {
+    @include pad-box(24px);
+    background: $secondary-background-color;
+    width:100%;
+  }
+
+  .question-header {
+    @include font(14px, 500, 0, $medium-gray);
+  }
+}
+
+.destination-form-drawer {
+  & .destination-form {
+    width:100%;
+
+    .link-form {
+      @include font(14px, 700,0, $dark-gray);
+      @include flex(row, space-between, center);
+      margin-bottom:12px;
+      @include pad-box(0 0 3px 0);
+      @include border(none none solid none);
+    }
+
+    &.as-drawer {
+      //@include pad-box(24px);
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import "../../../global/scss/config";
+
+.trip-form {
+  @include scale-max-content-width;
+  @include flex(column, space-between, flex-start);
+  @include max-size;
+
+  &-content {
+    @include pad-box(24px);
+    background: $secondary-background-color;
+    width:100%;
+  }
+
+  .question-header {
+    @include font(14px, 500, 0, $medium-gray);
+  }
+}
+
+.trip-form-drawer {
+  & .trip-form {
+    width:100%;
+    &.as-drawer {
+      //@include pad-box(24px);
+    }
+  }
+}

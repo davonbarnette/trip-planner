@@ -1,0 +1,122 @@
+@import "../../../global/scss/config";
+
+.trip-container {
+  @include flex(column, flex-start, center);
+  @include max-size;
+  background: $secondary-background-color;
+
+  &-header {
+    @include flex(row, center, center);
+    width: 100%;
+    position: relative;
+    background: #161619;
+
+    &:after {
+      bottom: 0;
+      transform: translate(0, 100%);
+      position: absolute;
+      z-index: 0;
+      height: 100px;
+      width: 100%;
+      content: '';
+      background: #161619;
+    }
+
+    &-content {
+      @include flex(row, space-between, center);
+      @include scale-max-content-width;
+      margin-top: 36px;
+
+      .title {
+        @include font(24px, 700, 0, white);
+      }
+    }
+  }
+
+  &-content {
+    @include flex(row, flex-start, center);
+    @include scale-max-content-width;
+    @include pad-box(24px);
+    margin-top: 36px;
+    position: relative;
+    background: white;
+
+    @media screen and (max-width: $screen-md-min) {
+      @include pad-box(12px);
+    }
+
+    .details {
+      @include flex(column, flex-start, flex-start);
+      width: 100%;
+      color: $dark-gray;
+
+      .stats {
+        @include flex(row, flex-start, center);
+        @include border(none none solid none);
+        @include pad-box(0 0 16px 0);
+        margin-bottom: 12px;
+        width: 100%;
+
+        .statistic {
+          @include flex(row, flex-start, center);
+          font-size: 18px;
+          margin-left: 12px;
+
+          &:first-of-type {
+            margin-left: 0;
+          }
+
+          & > span {
+            color: $orange;
+          }
+
+          & > div {
+            @include font(14px, 600, 0, $medium-gray);
+            margin-left: 6px;
+
+            font-family: JetBrains Mono, monospace;
+          }
+        }
+      }
+
+      .description {
+
+      }
+    }
+
+    .bottom {
+      @include flex(row, flex-start, flex-start);
+      width: 100%;
+      margin-top: 24px;
+
+      &-header {
+        @include flex(row, space-between, center);
+        @include font(18px, 700, 0, $dark-gray);
+        @include border(none none solid none);
+        @include pad-box(0 0 6px 0);
+        font-family: JetBrains Mono, monospace;
+        width: 100%;
+        margin-top:24px;
+      }
+
+      .left {
+        flex: 1 1 50%;
+        width:100%;
+      }
+
+      .right {
+        flex: 1 1 50%;
+        margin-left: 24px;
+        width:100%;
+      }
+
+      @media screen and (max-width: $screen-md-min) {
+        flex-direction: column;
+        .right {
+          margin-left:0;
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,38 @@
+@import '../../global/scss/config';
+
+.dashboard {
+  @include flex(row, flex-start, center);
+  @include pad-box(36px 48px);
+  @include max-size;
+  flex: 1 1 100%;
+
+  .left {
+    @include flex(column, flex-start, flex-start);
+    flex: 1 0 500px;
+    height: 100%;
+    margin-right: 24px;
+
+
+    .directions-wrapper {
+      @include box-shadow-4;
+      background: white;
+      overflow: hidden;
+      border-radius: 10px;
+      width: 100%;
+      margin-bottom: 36px;
+    }
+
+  }
+
+  .right {
+    height: 100%;
+    width: 100%;
+
+    .coordinates-table-wrapper {
+      @include box-shadow-4;
+      background: white;
+      width: 100%;
+      border-radius: 10px;
+    }
+  }
+}

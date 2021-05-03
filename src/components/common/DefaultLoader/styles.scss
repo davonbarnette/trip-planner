@@ -1,0 +1,13 @@
+@import '../../../global/scss/config';
+
+.default-loader {
+  @include flex(column, center, center);
+  .loading-text {
+    @include font(14px, 500, 0, $dark-gray);
+    margin-top:12px;
+    & span {
+      margin-right:9px;
+      color:$teal;
+    }
+  }
+}

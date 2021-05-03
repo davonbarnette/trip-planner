@@ -1,0 +1,11 @@
+@import '../../../global/scss/config';
+
+.dragger-wrapper {
+  @include pad-box(12px 24px);
+  border:none !important;
+  background: $secondary-background-color !important;
+  transition: all 0.2s !important;
+  &:hover {
+    background-color: #dfe5ea !important;
+  }
+}

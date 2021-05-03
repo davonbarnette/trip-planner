@@ -1,0 +1,18 @@
+@import '../../../global/scss/config';
+
+.destination {
+  &-content {
+    @include flex(row, flex-start, flex-start);
+
+    .header {
+
+    }
+
+    &-left {
+      flex: 1 1 50%;
+    }
+    &-right{
+      flex: 1 1 50%;
+    }
+  }
+}

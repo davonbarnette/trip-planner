@@ -1,0 +1,17 @@
+@import "../../../global/scss/config";
+
+.attendees-list {
+
+  .attendee-list-item {
+    @include flex(column, flex-start, flex-start);
+    @include border(none none solid none);
+    .username {
+      @include font(16px, 700, 0, $dark-gray);
+    }
+    .email {
+      @include font(14px, 500, 0, $medium-gray);
+    }
+
+  }
+
+}

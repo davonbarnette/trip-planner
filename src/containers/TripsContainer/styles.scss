@@ -1,0 +1,32 @@
+@import "../../global/scss/config";
+
+.trips-container {
+  @include flex(row, center, flex-start);
+  @include max-size;
+  background: $secondary-background-color;
+
+  &-content {
+    @include scale-max-content-width;
+    @include max-size;
+    @include pad-box(24px);
+
+    @media screen and (max-width: $screen-md-min) {
+      @include pad-box(12px);
+    }
+
+    &-header {
+      @include flex(row, space-between, center);
+      @include font(24px, 700, 0, $dark-gray);
+      @include pad-box(0 0 12px 0);
+      @include border(none none solid none);
+
+      margin: 24px 0;
+
+      .title {
+        line-height: 1em;
+        font-family: JetBrains Mono, monospace;
+      }
+
+    }
+  }
+}

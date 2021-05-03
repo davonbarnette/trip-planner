@@ -1,0 +1,40 @@
+@import "../../../global/scss/config";
+
+.flights-list {
+
+  .flight-list-item {
+    @include flex(row, flex-start, center);
+    .departure {
+      @include flex(column, flex-start, flex-start);
+      //flex: 1 1 100%;
+      &:first-of-type {
+        margin-right:18px;
+      }
+
+      .date {
+        @include font(14px, 600, 0, $dark-gray);
+        @include flex(row, space-between, center);
+        width:100%;
+        & > span {
+          @include font(14px, 700, 0, $dark-gray);
+        }
+      }
+      .time {
+        @include font(13px, 500, 0, $medium-gray);
+      }
+    }
+
+    .info {
+      @include flex(column, flex-end, flex-end);
+      @include font(14px, 600, 0, $medium-gray);
+      margin-left:auto;
+      .seat {
+
+      }
+      .plane {
+
+      }
+    }
+  }
+
+}

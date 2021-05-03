@@ -1,0 +1,17 @@
+@import "../../../global/scss/config";
+
+.geo-search-select {
+
+  .ant-form-item {
+    margin-bottom:8px;
+    &-control {
+      line-height:1em;
+    }
+  }
+
+  .checkbox {
+    margin-bottom: 12px;
+    margin-top: 8px;
+  }
+
+}

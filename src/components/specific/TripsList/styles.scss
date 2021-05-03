@@ -1,0 +1,83 @@
+@import "../../../global/scss/config";
+
+.trips-list {
+  @include flex(column, flex-start, flex-start);
+
+  &-item {
+    @include flex(column, flex-start, flex-start);
+    @include box-shadow-4;
+    overflow: hidden;
+    background:white;
+    transition: all 0.2s;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .image {
+      min-height: 150px;
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .content {
+      @include pad-box(24px);
+      @include flex(column, flex-start, flex-start);
+      width:100%;
+      flex: 1 1 100%;
+      height: 100%;
+
+      .header {
+        @include flex(row, space-between, center);
+        margin-bottom:9px;
+        width:100%;
+        flex: 1 1 100%;
+
+        .title {
+          @include font(24px, 700, 0, $dark-gray);
+        }
+        .days-until {
+          @include font(12px, 600, 0, white);
+          background:$green;
+          @include pad-box(3px 9px);
+          border-radius:6px;
+        }
+      }
+
+      .description {
+        @include font(14px, 600, 0, $medium-gray);
+        min-height:44px;
+      }
+
+      .statistics {
+        @include flex(row, flex-start, center);
+        width:100%;
+        .statistic {
+          @include flex(row, flex-start, center);
+          font-size: 18px;
+          margin-left: 12px;
+
+          &:first-of-type{
+            margin-left: 0;
+          }
+
+          & > span {
+            color: $orange;
+          }
+
+          & > div {
+            @include font(14px, 600, 0, $medium-gray);
+            margin-left: 6px;
+
+            font-family: JetBrains Mono, monospace;
+          }
+        }
+      }
+
+    }
+
+  }
+
+}
